@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Configuration</title>
+    <link rel="stylesheet" href="bulma.min.css">
+
+  </head>
+  <body class="has-background-grey ">
+      <h1 class="title">Broadcaster panel</h1>
+
+      <section class="section">
+          <div class="field ">
+            <label class="label">EBS base</label>
+            <p class="control">
+                <input class="input" type="text" id="ebs-base">
+            </p>
+	    <p class="help">
+	        Example: https://quizzical-brahmagupta-7af31f.netlify.app
+	    </p>
+          </div>
+      </section>
+      <section class="section">
+          <div class="field">
+              <p class="control">
+                <button id="authorize"
+		    class="button is-warning is-rounded is-medium is-lowercase is-outlined"
+		    aria-label="authorize">
+                    Connect Pavlok (opens in new tab)
+		</button>
+              </p>
+          </div>
+      </section>
+
+      <footer class="footer has-background-black">
+        <div class="field">
+          <label class="label">Notifications email</label>
+          <div class="control">
+            <input class="input has-background-grey-dark" type="email"
+	        aria-describedby="hint1" id="user-email" disabled>
+          </div>
+          <p class="help" id="hint1">Example: jane@sample.com</p>
+        </div>
+        <div class="field">
+          <label class="label">Discord webhook</label>
+          <div class="control">
+            <input class="input has-background-grey-dark" type="text"
+	        aria-describedby="hint2" id="discord-webhook" disabled>
+          </div>
+          <p class="help" id="hint2">Example: sample.com</p>
+        </div>
+      </footer>
+
+
+
+<!--import extension helper library -->
+  <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+  <script src="config.js"></script>
+</body>
+</html>

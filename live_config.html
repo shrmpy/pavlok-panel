@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Configuration</title>
+    <link rel="stylesheet" href="bulma.min.css">
+
+  </head>
+  <body>
+    <section class="hero has-background-grey-dark is-fullheight">
+      <div class="hero-head">
+        <h1 class="title">Control access</h1>
+      </div>
+
+      <div class="hero-body">
+        <p class="control">
+          <button id="zapper"
+            class="button is-warning is-rounded is-medium is-lowercase is-outlined"
+	    aria-label="shock">
+            Shock
+	    </button>
+	</p>
+      </div>
+
+      <div class="hero-foot">
+        <form class="field is-grouped has-text-black-bis" name="togglegrp">
+          <p class="control">
+              <label class="radio" for="broadcaster">
+                  <input type="radio" name="toggle" id="broadcaster" value="broadcaster">
+                  Broadcaster
+              </label>
+          </p>
+          <p class="control">
+              <label class="radio" for="public">
+                  <input type="radio" name="toggle" id="public" value="public">
+                  Public / Viewers
+              </label>
+          </p>
+        </form>
+
+        <article class="message is-dark is-small">
+          <div class="message-header">
+                <p>Debug log</p>
+                <button class="close" aria-label="close"></button>
+          </div>
+          <div class="message-body has-background-black" id="debug-panel">
+                debug messages......
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+<!--import extension helper library -->
+  <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+  <script src="live_config.js"></script>
+
+  </body>
+</html>
+
